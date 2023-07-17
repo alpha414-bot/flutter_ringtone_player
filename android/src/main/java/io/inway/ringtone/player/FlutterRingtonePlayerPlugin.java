@@ -82,6 +82,7 @@ public class FlutterRingtonePlayerPlugin implements MethodCallHandler, FlutterPl
             } else if (call.method.equals("stop")) {
                 if (ringtone != null) {
                     ringtone.stop();
+                    ringtone = null; // nullify the ringtone after stopping it
                 }
 
                 result.success(null);
